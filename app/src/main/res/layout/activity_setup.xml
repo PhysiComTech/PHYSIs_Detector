@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white"
+    tools:context=".SetupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:text="Scan WiFi List" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_wifi_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/BtnTheme"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Scan WiFi"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_wifi_list"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_wifi_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPhysis" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:text="Connect WiFi" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_wifi_ssid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:hint="WiFi Name.."/>
+
+    <EditText
+        android:id="@+id/et_wifi_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:hint="WiFi Password.." />
+
+    <Button
+        android:id="@+id/btn_wifi_setup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/BtnTheme"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="WiFi Setup"/>
+
+</LinearLayout>

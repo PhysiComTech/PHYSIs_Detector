@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="8dp"
+    android:paddingStart="8dp"
+    android:id="@+id/rl_wifi_item">
+
+    <ImageView
+        android:id="@+id/iv_wifi_rssi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_wifi_0"/>
+
+    <ImageView
+        android:id="@+id/iv_wifi_secret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_toStartOf="@id/iv_wifi_rssi"
+        android:src="@drawable/ic_secret"/>
+
+    <TextView
+        android:id="@+id/tv_wifi_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_wifi_rssi"
+        android:layout_alignBottom="@id/iv_wifi_rssi"
+        android:layout_toStartOf="@id/iv_wifi_secret"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>

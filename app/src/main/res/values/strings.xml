@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PHYSIs Detector</string>
+
+    <string name="permission_notify_title">Notification</string>
+    <string name="permission_notify_message">PHYSIs KiT 애플리케이션에서는 블루투스 기능의 정상 동작을 위한 위치 권한이 필요합니다.</string>
+    <string name="permission_denied">위치권한 거부로 인해 애플리케이션이 종료됩니다.\n실행을 위해 [설정] -> [애플리케이션] 에서 CoinMatric의 위치 권한을 허용하세요.</string>
+
+</resources>

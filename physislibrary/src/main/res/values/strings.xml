@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PHYSIsLibrary</string>
+    <string name="err_support_ble">해당 디바이스는 블루투스 서비스를 제공하지 않습니다.</string>
+</resources>
