@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.physicomtech.kit.physis_psmdetector.dialog.NotifyDialog;
+import com.physicomtech.kit.physislibrary.ble.BluetoothLEManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -82,13 +83,18 @@ public class IntroActivity extends AppCompatActivity {
     }
 
     private void nextActivity(){
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(), MonitoringActivity.class));
-                finish();
-            }
-        }, INTENT_DELAY);
+        if(!BluetoothLEManager.getInstance(getApplicationContext()).getEnable()){
+            Toast.makeText(getApplicationContext(), "블루투스 활성화 후 다시 시도해주세요.", Toast.LENGTH_SHORT).show();
+            finish();
+        }else{
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(getApplicationContext(), MonitoringActivity.class));
+                    finish();
+                }
+            }, INTENT_DELAY);
+        }
     }
     // endregion
 
