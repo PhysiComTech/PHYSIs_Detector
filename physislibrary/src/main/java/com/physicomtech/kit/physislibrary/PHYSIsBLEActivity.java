@@ -111,6 +111,12 @@ public class PHYSIsBLEActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), R.string.err_support_ble, Toast.LENGTH_SHORT).show();
             finish();
         }
+
+        if(!bleManager.getEnable()){
+            Toast.makeText(getApplicationContext(), R.string.err_disable_ble, Toast.LENGTH_SHORT).show();
+            finish();
+        }
+
         bleManager.bindService();
         bleManager.setHandler(physisHandle);
     }
